@@ -20,7 +20,7 @@ Features
 """,
     'author': 'Uncanny Consulting Services LLP',
     'website': 'https://uncannycs.com',
-    'license': 'OPL-1',
+    'license': 'Other proprietary',
     'depends': ['sale_management'],
     'external_dependencies': {
         'python': ['xlsxwriter'],
