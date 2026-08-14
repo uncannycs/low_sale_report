@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Sits alongside Orders / To Invoice / Products / Reporting / Configuration -->
+    <menuitem id="menu_low_sale_report_ucs_root"
+              name="Low Sale Report"
+              parent="sale.sale_menu_root"
+              action="action_low_sale_report_wizard"
+              sequence="45"/>
+</odoo>
