@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_low_sale_report_wizard_form" model="ir.ui.view">
+        <field name="name">low.sale.report.wizard.form</field>
+        <field name="model">low.sale.report.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Low Sale Report">
+                <group>
+                    <group>
+                        <field name="report_type"/>
+                        <field name="report_period"/>
+                        <label for="date_from" string="Period under analysis"/>
+                        <div class="o_row">
+                            <field name="date_from" readonly="report_period != 'custom'"/>
+                            <span>-</span>
+                            <field name="date_to" readonly="report_period != 'custom'"/>
+                        </div>
+                        <field name="critical_level"/>
+                    </group>
+                    <group>
+                        <field name="product_category_ids" widget="many2many_tags"
+                               options="{'no_create': True}"/>
+                        <field name="team_ids" widget="many2many_tags"
+                               options="{'no_create': True}"/>
+                    </group>
+                </group>
+                <footer>
+                    <button name="action_show_in_odoo" string="Show in Odoo"
+                            type="object" class="btn-primary"/>
+                    <button name="action_export_xlsx" string="Export as xlsx"
+                            type="object" class="btn-secondary"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_low_sale_report_wizard" model="ir.actions.act_window">
+        <field name="name">Low Sale Report</field>
+        <field name="res_model">low.sale.report.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+</odoo>
