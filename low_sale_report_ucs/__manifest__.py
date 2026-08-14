@@ -33,7 +33,7 @@ Features
         'views/menu_views.xml',
     ],
     'images': ['static/description/banner.gif'],
-    'price': 15,
+    'price': 30,
     'currency': 'USD',
     'installable': True,
     'application': True,
